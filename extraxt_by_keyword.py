@@ -3,7 +3,7 @@ import codecs
 from bs4 import BeautifulSoup
 
 # Read the spreadsheet with filenames
-df = pd.read_excel("Filename.xlsx") # Only if the file is in the same folder, otherwise modify path
+df = pd.read_excel("input/Filename.xlsx") # Only if the file is in the same folder, otherwise modify path
 
 # Empty list for storing results
 results = []
@@ -49,5 +49,5 @@ for filename in df['FileName']:
 df = pd.DataFrame(results, columns=['Filename', 'Frequency', 'Paragraph'])
 
 # Export to CSV and Excel
-df.to_csv('results.csv')
-df.to_excel('results.xlsx')
+df.to_csv('output/results.csv')
+df.to_excel('output/results.xlsx')
