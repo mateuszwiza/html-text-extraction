@@ -3,7 +3,7 @@ import codecs
 from bs4 import BeautifulSoup
 
 # Read the spreadsheet with filenames
-df = pd.read_excel("input/Filename.xlsx") # Only if the file is in the same folder, otherwise modify path
+df = pd.read_excel("input/Filename.xlsx")
 
 # Empty list for storing results
 results = []
