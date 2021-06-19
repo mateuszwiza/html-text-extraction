@@ -23,11 +23,6 @@ for filename in df['FileName']:
         script.decompose()
     strips = list(soup.stripped_strings)
 
-    # Connect all pieces of textxsinto a single string
-    string = ''
-    for s in strips:
-        string += ' ' + s
-
     # Look for the keyword between quotation marks and save the next paragraph
     list_of_strings = []
     counter = 0
