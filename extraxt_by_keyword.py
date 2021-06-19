@@ -3,13 +3,13 @@ import codecs
 from bs4 import BeautifulSoup
 
 # Read the spreadsheet with filenames
-df = pd.read_excel("input/Filename.xlsx") # Only if the file is in the same folder, otherwise modify path
+df = pd.read_excel("input/Filename.xlsx")
 
 # Empty list for storing results
 results = []
 
 # Set the keyword
-keyword = 'GAAP'
+keyword = ''
 
 # Repeat for each filename
 for filename in df['FileName']:
@@ -49,5 +49,5 @@ for filename in df['FileName']:
 df = pd.DataFrame(results, columns=['Filename', 'Frequency', 'Paragraph'])
 
 # Export to CSV and Excel
-df.to_csv('output/results.csv')
-df.to_excel('output/results.xlsx')
+df.to_csv('output/keyword_results.csv')
+df.to_excel('output/keyword_results.xlsx')
